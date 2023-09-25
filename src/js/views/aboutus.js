@@ -16,6 +16,10 @@ export const PeopleView = () => {
             src={`https://starwars-visualguide.com/assets/img/characters/${
               parseInt(params.id) + 1
             }.jpg`}
+            onError={({ currentTarget }) => {
+              currentTarget.onerror = null; // prevents looping
+              currentTarget.src="https://starwars-visualguide.com/assets/img/placeholder.jpg";
+            }}
           />
         </div>
         <div className="col text-white">
@@ -37,13 +41,8 @@ export const PeopleView = () => {
               </div>
             </button>
           </div>
-          <p>
-            Veniam irure veniam sit incididunt excepteur magna excepteur non
-            aute ut. Nisi irure consectetur enim ullamco irure ad. Tempor eu
-            pariatur incididunt id minim in mollit exercitation irure est. Anim
-            ex ut est ea exercitation labore aliqua culpa non ut. Ullamco
-            pariatur ad adipisicing est minim sunt laborum aliqua amet laboris
-            velit anim.
+          <p> 
+          A person within the Star Wars universe.
           </p>
         </div>
       </div>
@@ -91,6 +90,10 @@ export const PlanetsView = () => {
             src={`https://starwars-visualguide.com/assets/img/planets/${
               parseInt(params.id) + 1
             }.jpg`}
+            onError={({ currentTarget }) => {
+              currentTarget.onerror = null; // prevents looping
+              currentTarget.src="https://starwars-visualguide.com/assets/img/placeholder.jpg";
+            }}
           />
         </div>
         <div className="col text-white">
@@ -113,12 +116,7 @@ export const PlanetsView = () => {
             </button>
           </div>
           <p>
-            Veniam irure veniam sit incididunt excepteur magna excepteur non
-            aute ut. Nisi irure consectetur enim ullamco irure ad. Tempor eu
-            pariatur incididunt id minim in mollit exercitation irure est. Anim
-            ex ut est ea exercitation labore aliqua culpa non ut. Ullamco
-            pariatur ad adipisicing est minim sunt laborum aliqua amet laboris
-            velit anim.
+          A planet within the Star Wars universe
           </p>
         </div>
       </div>
@@ -164,6 +162,10 @@ export const VehiclesView = () => {
           <img
             className="displayedImage border border-warning border-4 border-opacity-50"
             src={"https://starwars-visualguide.com/assets/img/vehicles/4.jpg"}
+            onError={({ currentTarget }) => {
+              currentTarget.onerror = null; // prevents looping
+              currentTarget.src="https://starwars-visualguide.com/assets/img/placeholder.jpg";
+            }}
           />
         </div>
         <div className="col text-white">
@@ -186,12 +188,7 @@ export const VehiclesView = () => {
             </button>
           </div>
           <p>
-            Veniam irure veniam sit incididunt excepteur magna excepteur non
-            aute ut. Nisi irure consectetur enim ullamco irure ad. Tempor eu
-            pariatur incididunt id minim in mollit exercitation irure est. Anim
-            ex ut est ea exercitation labore aliqua culpa non ut. Ullamco
-            pariatur ad adipisicing est minim sunt laborum aliqua amet laboris
-            velit anim.
+          A vehicle within the Star Wars universe
           </p>
         </div>
       </div>
