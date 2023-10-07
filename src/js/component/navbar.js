@@ -11,7 +11,7 @@ export const Navbar = (props) => {
 
   return (
     // STARTING IMAGE LOGO SENDING HOME ON CLICK
-    <nav className="navbar navbar-light bg-secondary mb-3">
+    <nav className="navbar navbar-light bg-secondary mb-3 sticky-top" id="navbar">
       <Link to="/">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Star_wars2.svg/1200px-Star_wars2.svg.png"
@@ -25,7 +25,7 @@ export const Navbar = (props) => {
 
       {/* FAVORITES DROPDOWN LIST */}
 
-      <div className="dropdown ml-auto">
+      <div className="dropdown ml-auto"  id="inicio">
         <button
           className="btn btn-warning dropdown-toggle me-5 favorites"
           type="button"

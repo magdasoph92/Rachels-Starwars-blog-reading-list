@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ScrollToTop from "./component/scrollToTop";
+import ScrollToTop from "./component/ScrollToTop";
 
 import { Home } from "./views/home";
 import injectContext from "./store/appContext";
@@ -8,9 +8,12 @@ import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { PeopleView, PlanetsView, VehiclesView } from "./views/aboutus";
+import ScrollButton from "./component/ScrollButton";
 
 const Layout = () => {
   const basename = process.env.BASENAME || "";
+
+
 
   return (
     <div className="bg bg-dark">
@@ -26,6 +29,7 @@ const Layout = () => {
           </Routes>
         </ScrollToTop>
       </BrowserRouter>
+      <ScrollButton/>
       <Footer />
     </div>
   );
